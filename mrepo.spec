@@ -1,32 +1,28 @@
-# $Id: mrepo.spec 2103 2004-08-26 10:38:07Z dag $
-# Authority: dag
-# Upstream: Dag Wieers <dag$wieers,com>
-
-Summary: Set up repositories from various sources (ISO, RHN, YOU, rsync, http, ftp, ...)
-Name: mrepo
-Version: 0.8.8
+Summary: Set up repositories from various sources (ISO, RHN, YOU, rsync, http, ftp, ...) using pyton 3
+Name: mrepo_py3
+Version: 1.0.0
 Release: 1
 License: GPL
 Group: System Environment/Base
-URL: http://dag.wieers.com/home-made/mrepo/
+URL: https://github.com/LunaBarrett/Mrepo-py3
 
-Packager: Dag Wieers <dag@wieers.com>
-Vendor: Dag Apt Repository, http://dag.wieers.com/apt/
+Packager: Luna Barrett <luna.batterr@stfc.ac.uk>
+Vendor: STFC
 
-Source: http://dag.wieers.com/home-made/mrepo/mrepo-%{version}.tar.bz2
+Source: https://github.com/LunaBarrett/Mrepo-py3
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 BuildArch: noarch
-BuildRequires: /usr/bin/python2
+BuildRequires: /usr/bin/python3
 Requires: createrepo
 Requires: fuse
-Requires: python >= 2.0
+Requires: python >= 3.0
 Requires: pyOpenSSL
 Requires: fuse
 Obsoletes: yam <= %{version}
 
 %description
-mrepo builds a local Apt/Yum RPM repository from local ISO files,
+mrepo builds a local Apt/Yum/Dnf RPM repository from local ISO files,
 downloaded updates and extra packages from RHN and 3rd party
 repositories.
 
@@ -115,6 +111,9 @@ fi
 %{_localstatedir}/www/mrepo/
 
 %changelog
+* Mon Feb 19 2024  Luna Barrett <luna.barrett@stfc.ac.uk> - 1.0.0-1
+- Updated to release 1.0.0.
+
 * Mon Sep 19 2011 Dag Wieers <dag@wieers.com> - 0.8.8-1
 - Updated to release 0.8.8.
 
