@@ -9,7 +9,7 @@ URL: https://github.com/LunaBarrett/Mrepo-py3
 Packager: Luna Barrett <luna.batterr@stfc.ac.uk>
 Vendor: STFC
 
-Source: https://github.com/LunaBarrett/Mrepo-py3
+Source0: Mrepo-py3.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 BuildArch: noarch
@@ -39,7 +39,7 @@ updates for the whole network and provide the proper files to
 allow installations via the network.
 
 %prep
-%setup
+%setup -q -n Mrepo-py3
 
 %{__perl} -pi.orig -e 's|^(VERSION)\s*=\s*.+$|$1 = "%{version}"|' mrepo
 
