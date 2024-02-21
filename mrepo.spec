@@ -17,7 +17,7 @@ BuildRequires: /usr/bin/python3
 Requires: createrepo
 Requires: fuse
 Requires: python3 >= 3.0
-Requires: pyOpenSSL
+Requires: python3-pyOpenSSL
 Requires: fuse
 Obsoletes: yam <= %{version}
 
