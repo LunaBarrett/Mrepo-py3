@@ -16,7 +16,7 @@ BuildArch: noarch
 BuildRequires: /usr/bin/python3
 Requires: createrepo
 Requires: fuse
-Requires: python >= 3.0
+Requires: python3 >= 3.0
 Requires: pyOpenSSL
 Requires: fuse
 Obsoletes: yam <= %{version}
