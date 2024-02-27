@@ -1172,12 +1172,20 @@ def mountpoint(dev):
 
 
 def distsort(a, b):
-    return cmp(a.nick, b.nick)
-
+    if a.nick < b.nick:
+        return -1
+    elif a.nick > b.nick:
+        return 1
+    elif a.nick == b.nick:
+        return 0
 
 def reposort(a, b):
-    return cmp(a.name, b.name)
-
+    if a.name < b.name:
+        return -1
+    elif a.name > b.name:
+        return 1
+    elif a.name == b.name:
+        return 0
 
 def vercmp(a, b):
     al = a.split('.')
