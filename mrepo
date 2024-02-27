@@ -1188,7 +1188,13 @@ def vercmp(a, b):
             return -1
         elif al[i] > bl[i]:
             return 1
-    return cmp(len(al), len(bl))
+    for i in range(1, minlen):
+        if len(al) < len(bl):
+            return -1
+        elif len(al) > len(bl):
+            return 1
+        elif len(al) == len(bl):
+            return 0
 
 
 def symlinkglob(str, *targets):
